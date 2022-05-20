@@ -23,25 +23,33 @@ function CustomHookExample2() {
   return (
     <div>
       <h5 className='mt-4 text-primary'>CustomHookExample2</h5>
+      <>
+        <form onSubmit={onSubmit} className='w-50'>
+          <div className='mb-3'>
+            <label htmlFor="" className='form-label'>Task</label>
+            <input
+              className='form-control' 
+              type="text"
+              value={task}
+              onChange={(e) => setTask(e.target.value)} 
+            />
 
-      <form onSubmit={onSubmit} className='w-50'>
-        <div className='mb-3'>
-          <label htmlFor="" className='form-label'>Task</label>
-          <input
-            className='form-control' 
-            type="text"
-            value={task}
-            onChange={(e) => setTask(e.target.value)} 
-          />
+            <button 
+              type='submit' className='btn btn-outline-success mt-3'
+            >
+              Submit
+            </button>
 
-          <button 
-            type='submit' className='btn btn-outline-success mt-3'
-          >
-            Submit
-          </button>
+          </div>
+        </form>
+        {/* add line */}
+        <hr />
 
-        </div>
-      </form>
+        {tasks.map((task) => (
+          <h3 key={task.date}>{task.task}</h3>
+        ))}
+
+      </>
     </div>
   )
 }
