@@ -5,11 +5,13 @@ import UseRefExample3 from './components/UseRefExample3';
 import UseMemoExample from './components/UseMemoExample';
 import UseCallbackExample from './components/UseCallbackExample';
 import CustomHookExample from './components/CustomHookExample';
+import CustomHookExample2 from './components/CustomHookExample2';
 
 
 function App() {
   return (
     <div className="container mt-5" >
+      <CustomHookExample2 />
       <UseRefExample1 />
       <UseRefExample2 />
       <UseRefExample3 />
