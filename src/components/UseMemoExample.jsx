@@ -24,7 +24,7 @@ function UseMemoExample() {
 
   return (
     <div>
-      <h5>UseMemoExample</h5>
+      <h5 className='mt-4 text-secondary'>UseMemoExample</h5>
       <input 
         type="number" 
         value={number}

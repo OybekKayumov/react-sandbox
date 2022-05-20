@@ -15,7 +15,7 @@ function UseRefExample1() {
 
   return (
     <div>
-      <h5>UseRefExample1</h5>
+      <h5 className='mt-4 text-warning'>UseRefExample1</h5>
       <form onSubmit={onSubmit}>
         <label htmlFor="name">Name</label>
         <input type="text" ref={inputRef} name="" id="name" className='form-control mb-2' />
