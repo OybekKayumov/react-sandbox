@@ -16,6 +16,8 @@ function CustomHookExample2() {
       date: new Date().toLocaleDateString()
     }
 
+    // get previous array tasks and add a new task Object
+    setTasks([...tasks, taskObj])
   }
 
   return (
