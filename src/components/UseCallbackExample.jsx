@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
 
 function UseCallbackExample() {
   const [tasks, setTasks] = useState([])
@@ -19,7 +18,7 @@ function UseCallbackExample() {
   )  
 }
 
-const Button = ({addTask}) => {
+const Button = React.memo(({addTask}) => {
   console.log('Button rendered');
 
   return (
@@ -27,6 +26,6 @@ const Button = ({addTask}) => {
       <button onClick={addTask} className='btn btn-outline-danger'>Add Task</button>
     </div>
   )
-}
+})
 
 export default UseCallbackExample
