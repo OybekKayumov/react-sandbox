@@ -3,9 +3,9 @@ import React, { useState, useCallback } from 'react'
 function UseCallbackExample() {
   const [tasks, setTasks] = useState([])
 
-  const addTask = () => {
+  const addTask = useCallback(() => {
     setTasks((prevState) => [...prevState, 'Some Task'])
-  }
+  }, [setTasks])
 
    return (
     <div>
