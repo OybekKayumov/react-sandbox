@@ -12,6 +12,9 @@ function UseCallbackExample() {
     <div>
       <h5 className='mt-4 text-success'>UseCallbackExample</h5>
       <Button addTask={addTask}/>
+      {tasks.map((task, index) => (
+        <p key={index}>{task}</p>
+      ))}
     </div>
   )  
 }
